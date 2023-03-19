@@ -1,0 +1,64 @@
+body {
+  --bg-color: #fff;
+  --text-color: #222;
+  --link-color: #222;
+}
+/* Define the dark mode styles */
+body.dark-mode {
+  --bg-color: #222;
+  --text-color: #fff;
+  --link-color: #fff;
+}
+/* Apply the styles to the page */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+a {
+  color: var(--link-color);
+}
+/* Style the button to toggle between light mode and dark mode */
+#toggle-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Style the skills section */
+#skills {
+  margin-top: 50px;
+  text-align: center;
+}
+#skills h2 {
+  margin-bottom: 30px;
+}
+#skills ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#skills li {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #eee;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 250px;
+}
+img {
+  width: 300px;
+}
+
+li {
+  color: black;
+}
+
