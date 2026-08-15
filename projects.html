@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects — A gallery of Computer Science projects by Alhoussine Khallil.">
+  <title>Projects | Alhoussine Khallil — Portfolio</title>
+
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="favicon.ico">
+</head>
+
+  <body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-profile">
+      <img src="assets/images/myphoto.jpg" alt="Profile photo of Alhoussine Khallil" class="avatar">
+      <div class="kaomoji">(。・ω・。)ノ</div>
+    </div>
+
+    <div class="sidebar-frame">
+      <h3>NAVIGATION</h3>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-frame">
+      <h3>CLIMATE</h3>
+      <div id="weather-widget" class="weather-widget">
+        <p class="weather-loading">Loading climate data...</p>
+      </div>
+    </div>
+
+    <div class="sidebar-frame">
+      <h3>MOOD</h3>
+      <div class="mood-tracker">
+        <span class="mood-emoji active" title="Productive">✨</span>
+        <span class="mood-emoji" title="Curious">🔍</span>
+        <span class="mood-emoji" title="Creative">🎨</span>
+        <span class="mood-emoji" title="Tired">😴</span>
+        <span class="mood-emoji" title="Happy">😊</span>
+      </div>
+    </div>
+
+    <div class="sidebar-frame">
+      <h3>SITE STATS</h3>
+      <div class="stat-box">
+        <span class="stat-label">Created</span>
+        <span class="stat-value">07/2024</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Updated</span>
+        <span class="stat-value">08/13/26</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Pages</span>
+        <span class="stat-value">4</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Projects</span>
+        <span class="stat-value">4</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main>
+    <div class="led-glow" aria-hidden="true"></div>
+    <div class="marquee-bar">
+      <div class="marquee-content">
+        ✨ Enter the gates of my cyber-palace ✨ <environment_details>
+Current time: Saturday, August 15, 2026 — 3:27 PM EDT ✨
+</environment_details>
+      </div>
+    </div>
+    <section>
+      <h2 class="section-title">★ Projects</h2>
+      <p class="projects-intro">A selection of Computer Science projects spanning systems programming, AI/ML, desktop automation, and health technology.</p>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Real-Time Emergency Sound Detection System -->
+        <article class="project-card tile-border">
+          <h3 class="project-card__title">Real-Time Emergency Sound Detection System</h3>
+          <p class="project-card__desc">A real-time, Linux-based audio classification system using Google's YAMNet deep learning model to detect critical emergency sounds with 86.7% accuracy. Designed for edge deployment on Raspberry Pi with multithreaded alerting and benchmarking frameworks.</p>
+          <ul class="project-card__tags" aria-label="Technologies used">
+            <li class="tag">Python</li>
+            <li class="tag">TensorFlow Lite</li>
+            <li class="tag">Raspberry Pi</li>
+            <li class="tag">Linux</li>
+            <li class="tag">Multithreading</li>
+          </ul>
+          <a class="project-card__link btn btn--ghost" href="https://github.com/alhoussine04/Real-time-Emergency-Sound-Detection-System-with-YAMNet" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+        </article>
+
+        <!-- Project 2: RaDoTech Health Monitoring System -->
+        <article class="project-card tile-border">
+          <h3 class="project-card__title">RaDoTech Health Monitoring System</h3>
+          <p class="project-card__desc">A cross-platform health monitoring simulator built with Qt and C/C++. Collaborated in a 4-member team to translate functional requirements into UML designs and implement production-quality code with over 1,500 lines.</p>
+          <ul class="project-card__tags" aria-label="Technologies used">
+            <li class="tag">C/C++</li>
+            <li class="tag">Qt</li>
+            <li class="tag">PostgreSQL</li>
+            <li class="tag">UML</li>
+            <li class="tag">System Design</li>
+          </ul>
+          <a class="project-card__link btn btn--ghost" href="https://github.com/kirat04/radotech" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+        </article>
+
+        <!-- Project 3: LabCoat Workspace Manager -->
+        <article class="project-card tile-border">
+          <h3 class="project-card__title">LabCoat Workspace Manager</h3>
+          <p class="project-card__desc">An Electron desktop app that enforces workspace rules for blocked, protected, auto-launch, and frozen processes with real-time monitoring. Features network controls via hosts-file blocklists and NextDNS category filtering.</p>
+          <ul class="project-card__tags" aria-label="Technologies used">
+            <li class="tag">Electron</li>
+            <li class="tag">Node.js</li>
+            <li class="tag">NextDNS</li>
+            <li class="tag">IPC Architecture</li>
+          </ul>
+          <a class="project-card__link btn btn--ghost" href="https://github.com/alhoussine04/LabCoat-Workspace-Manager" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+        </article>
+
+        <!-- Project 4: ASL-to-English Interpreter -->
+        <article class="project-card tile-border">
+          <h3 class="project-card__title">ASL-to-English Interpreter</h3>
+          <p class="project-card__desc">A real-time American Sign Language (ASL) recognition system that translates hand gestures into English text using OpenVINO, OpenCV, and Python. Optimized for low latency and high accuracy with a multi-threaded video inference pipeline.</p>
+          <ul class="project-card__tags" aria-label="Technologies used">
+            <li class="tag">Python</li>
+            <li class="tag">OpenCV</li>
+            <li class="tag">OpenVINO</li>
+            <li class="tag">Computer Vision</li>
+          </ul>
+          <a class="project-card__link btn btn--ghost" href="https://github.com/alhoussine04/Real-Time-Operating-System-Word-based-Sign-Language-Interpreter" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+        </article>
+
+      </div><!-- /.projects-grid -->
+    </section>
+
+    <!-- GitHub profile link -->
+    <div class="projects-github-cta">
+      <a href="https://github.com/alhoussine04" target="_blank" rel="noopener noreferrer">View all repositories on GitHub ↗</a>
+    </div>
+  </main>
+
+  <script src="js/weather.js"></script>
+  <script src="js/navigation-filter.js"></script>
+</body>
+
+</html>

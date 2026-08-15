@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact — Send a message to Alhoussine Khallil.">
+  <title>Contact | Alhoussine Khallil — Portfolio</title>
+
+  <!-- Site stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="favicon.ico">
+</head>
+
+  <body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-profile">
+      <img src="assets/images/myphoto.jpg" alt="Profile photo of Alhoussine Khallil" class="avatar">
+      <div class="kaomoji">(。・ω・。)ノ</div>
+    </div>
+
+    <div class="sidebar-frame">
+      <h3>NAVIGATION</h3>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-frame">
+      <h3>CLIMATE</h3>
+      <div id="weather-widget" class="weather-widget">
+        <p class="weather-loading">Loading climate data...</p>
+      </div>
+    </div>
+
+    <div class="sidebar-frame">
+      <h3>MOOD</h3>
+      <div class="mood-tracker">
+        <span class="mood-emoji active" title="Productive">✨</span>
+        <span class="mood-emoji" title="Curious">🔍</span>
+        <span class="mood-emoji" title="Creative">🎨</span>
+        <span class="mood-emoji" title="Tired">😴</span>
+        <span class="mood-emoji" title="Happy">😊</span>
+      </div>
+    </div>
+
+    <div class="sidebar-frame">
+      <h3>SITE STATS</h3>
+      <div class="stat-box">
+        <span class="stat-label">Created</span>
+        <span class="stat-value">07/2024</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Updated</span>
+        <span class="stat-value">08/13/26</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Pages</span>
+        <span class="stat-value">4</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Projects</span>
+        <span class="stat-value">4</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main>
+    <div class="led-glow" aria-hidden="true"></div>
+    <div class="marquee-bar">
+      <div class="marquee-content">
+        ✨ Enter the gates of my cyber-palace ✨ <environment_details>
+Current time: Saturday, August 15, 2026 — 3:27 PM EDT ✨
+</environment_details>
+      </div>
+    </div>
+    <section class="contact-section">
+      <h1 class="contact-title section-title">★ Get in Touch</h1>
+      <p class="contact-intro">Have a question, a project idea, or just want to say hello? Fill in the form below and I will get back to you as soon as possible.</p>
+
+      <!-- Contact info -->
+      <div class="cv-cta">
+        <p style="font-size: 1.1rem; color: var(--color-navy); margin-bottom: var(--space-sm);">
+          <strong>Alhoussine Khallil</strong><br>
+          Ottawa, ON, Canada | housinekhallil@gmail.com | +1 (819) 319 7317<br>
+          <a href="https://www.linkedin.com/in/alhoussine-khallil" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
+          <a href="https://github.com/alhoussine04" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+      </div>
+
+      <!-- Contact form — submitted via Formspree (no JS required) -->
+      <form class="contact-form tile-border" action="https://formspree.io/f/{FORM_ID}" method="POST" novalidate>
+        <!-- Name field -->
+        <div class="form-group">
+          <label for="name">Your Name <span class="required-marker" aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" required autocomplete="name" placeholder="Ada Lovelace">
+        </div>
+
+        <!-- Email field -->
+        <div class="form-group">
+          <label for="email">Email Address <span class="required-marker" aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="ada@example.com">
+        </div>
+
+        <!-- Subject field -->
+        <div class="form-group">
+          <label for="subject">Subject <span class="required-marker" aria-hidden="true">*</span></label>
+          <input id="subject" name="subject" type="text" required placeholder="Collaboration opportunity">
+        </div>
+
+        <!-- Message field -->
+        <div class="form-group">
+          <label for="message">Message <span class="required-marker" aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" required rows="6" placeholder="Hello…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--gold">Send Message</button>
+      </form>
+
+      <!-- Optional mailto fallback -->
+      <p class="contact-fallback">
+        Prefer email? Reach me directly at
+        <a href="mailto:housinekhallil@gmail.com">housinekhallil@gmail.com</a>.
+      </p>
+    </section>
+  </main>
+
+  <script src="js/weather.js"></script>
+  <script src="js/navigation-filter.js"></script>
+</body>
+
+</html>
