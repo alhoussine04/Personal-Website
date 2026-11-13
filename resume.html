@@ -76,9 +76,7 @@
     <div class="led-glow" aria-hidden="true"></div>
     <div class="marquee-bar">
       <div class="marquee-content">
-        ✨ Enter the gates of my cyber-palace ✨ <environment_details>
-Current time: Saturday, August 15, 2026 — 3:27 PM EDT ✨
-</environment_details>
+        ✨ Enter the gates of my cyber-palace ✨ <time id="site-clock">Loading Ottawa time…</time> ✨
       </div>
     </div>
 
@@ -86,11 +84,15 @@ Current time: Saturday, August 15, 2026 — 3:27 PM EDT ✨
 
     <!-- Contact Header -->
     <div class="cv-cta">
-      <p style="font-size: 1.1rem; color: var(--color-navy); margin-bottom: var(--space-sm);">
+      <p class="contact-details" style="font-size: 1.1rem; color: var(--color-navy); margin-bottom: var(--space-sm);">
         <strong>Alhoussine Khallil</strong><br>
-        Ottawa, ON, Canada | housinekhallil@gmail.com | +1 (819) 319 7317<br>
-        <a href="https://www.linkedin.com/in/alhoussine-khallil" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
-        <a href="https://github.com/alhoussine04" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>Ottawa, ON, Canada</span>
+        <span>housinekhallil@gmail.com</span>
+        <span>+1 (819) 319 7317</span>
+        <span class="contact-links">
+          <a href="https://www.linkedin.com/in/alhoussine-khallil" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+          <a href="https://github.com/alhoussine04" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </span>
       </p>
     </div>
 
@@ -224,6 +226,7 @@ Current time: Saturday, August 15, 2026 — 3:27 PM EDT ✨
 
   </main>
 
+  <script src="js/clock.js"></script>
   <script src="js/weather.js"></script>
   <script src="js/navigation-filter.js"></script>
 </body>

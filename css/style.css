@@ -60,7 +60,7 @@ body {
   line-height: 1.6;
   cursor: auto;
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 340px 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
     "sidebar main";
@@ -426,14 +426,15 @@ section>h2 {
   z-index: 0;
 }
 
-/* Avatar image clipped to octagon */
+/* Avatar keeps the photo's real proportions */
 .avatar {
   position: relative;
   z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  width: 270px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  clip-path: none;
 }
 
 /* ==========================================================================
@@ -450,7 +451,7 @@ section>h2 {
 /* CSS grid: fills available width; min column 280px (Requirement 4.1) */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   gap: var(--space-lg);
 }
 
@@ -750,6 +751,14 @@ section>h2 {
   outline-offset: 2px;
 }
 
+.contact-details > span:not(.contact-links) + span:not(.contact-links)::before {
+  content: " | ";
+}
+
+.contact-status[hidden] {
+  display: none;
+}
+
 /* ==========================================================================
    8. CV Download Fallback
    ========================================================================== */
@@ -787,11 +796,11 @@ section>h2 {
 }
 
 .sidebar-profile img {
-  width: 120px;
-  height: 120px;
+  width: 270px;
+  max-width: 100%;
+  height: auto;
   border: 4px ridge var(--color-gold);
-  margin-bottom: var(--space-sm);
-  image-rendering: pixelated;
+  margin: 0 auto var(--space-sm);
 }
 
 .sidebar-title {
@@ -1471,19 +1480,112 @@ section>h2 {
     border-bottom: none;
   }
 
-  /* Layout: hide sidebar, stack body grid */
+  /* Compact header: photo and links, then the page. Extra sidebar boxes stay on desktop. */
   body {
-    grid-template-columns: 1fr;
-    grid-template-areas: "main";
-    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .sidebar,
+  main {
+    min-width: 0;
+    width: 100%;
   }
 
   .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    top: auto;
+    height: auto;
+    margin: 0;
+    padding: 0.25rem 0 0;
+  }
+
+  .sidebar-profile {
+    margin-bottom: 0.25rem;
+  }
+
+  .sidebar-profile img,
+  .avatar {
+    width: 140px;
+    height: auto;
+  }
+
+  .kaomoji {
+    color: var(--color-gold);
+  }
+
+  .sidebar > .sidebar-frame:nth-child(2) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  .sidebar > .sidebar-frame:nth-child(2) h3 {
+    display: none;
+  }
+
+  .sidebar > .sidebar-frame:nth-child(2) ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .sidebar > .sidebar-frame:nth-child(2) li {
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+
+  .sidebar > .sidebar-frame:nth-child(2) li a {
+    text-align: center;
+    border: 2px ridge var(--color-gold);
+    padding: 0.45rem 0.5rem;
+    font-family: 'VT323', monospace;
+    font-size: 1.35rem;
+    letter-spacing: 0.04em;
+    color: var(--color-gold);
+  }
+
+  .sidebar > .sidebar-frame:nth-child(n+3) {
     display: none;
   }
 
   main {
-    padding: var(--space-lg) var(--space-md);
+    padding: 1rem 0.85rem;
+    border-width: 4px;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .contact-form,
+  .contact-intro,
+  .projects-intro {
+    max-width: 100%;
+  }
+
+  .contact-details > span:not(.contact-links) {
+    display: block;
+  }
+
+  .contact-details > span:not(.contact-links) + span:not(.contact-links)::before {
+    content: none;
+  }
+
+  .contact-links {
+    display: block;
+    margin-top: 0.25rem;
+  }
+
+  .hero-cta .btn,
+  .contact-form .btn--gold,
+  .cv-download {
+    width: 100%;
   }
 
   /* Typography: reduce heading sizes */
@@ -1503,7 +1605,7 @@ section>h2 {
 
   .hero-cta {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   /* Projects page */
